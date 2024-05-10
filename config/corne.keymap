@@ -16,7 +16,13 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp LSHFT>, <&kp LCTRL>;
         };
-    };
+        behaviors {
+            td1: tap_dance_minus_del {
+                compatible = "zmk,behavior-tap-dance";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kp BKSP>, <&kp ->;
+        };    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -28,7 +34,7 @@
 //                    | GUI/LFT | LWR | SPC |   | ENT | RSE/SPACE  |CTRL |
                         display-name = "Base";
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &td1
    &kp LALT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &td0     &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &mo 1 &mt LCTRL SPACE   &kp RET &lt 2 SPACE &mt LCTRL GRAVE
