@@ -15,14 +15,14 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&kp LSHFT>, <&kp LCTRL>;
-        };
-        behaviors {
+            };
             td1: tap_dance_minus_del {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&kp BKSP>, <&kp ->;
-        };    };
+            };    
+        };
         keymap {
                 compatible = "zmk,keymap";
 
